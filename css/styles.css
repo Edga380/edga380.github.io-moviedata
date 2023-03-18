@@ -1,0 +1,281 @@
+body {
+    background-color: rgb(30, 30, 30);
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+h1 {
+    color: whitesmoke;
+    font-family: monospace;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    color: whitesmoke;
+    font-family: monospace;
+    padding: 0;
+    margin: 0;
+}
+
+h3 {
+    color: whitesmoke;
+    font-family: monospace;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: whitesmoke;
+    font-family: monospace;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: rgb(50, 50, 50);
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    width: 73%;
+    height: 80px;
+    margin-top: 50px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+header h1 {
+    padding: 25px;
+}
+
+.main-content {
+    background-color: rgb(40, 40, 40);
+    width: 73%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.page-title {
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.filters {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.filters-nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filters-nav a {
+    color: white;
+}
+
+.filter-nav-btn {
+    background-color: rgb(130, 50, 130);
+    color: whitesmoke;
+    font-family: monospace;
+    position: relative;
+    max-width: 200px;
+    height: 30px;
+    padding: 5px 50px 5px 50px;
+    margin-right: 5px;
+    border: solid 1px rgb(200, 100, 200);
+    border-radius: 3px;
+    text-align: center;
+    outline: none;
+}
+
+.filter-nav-btn:hover, .filter-nav-btn:focus {
+    background-color: rgb(200, 100, 200);
+    cursor: pointer;
+}
+
+.filter-nav-dropdown {
+    display: none;
+    background-color: rgb(130, 50, 130);
+    color: whitesmoke;
+    position: absolute;
+    border: solid 1px rgb(200, 100, 200);
+    border-radius: 3px;
+    top: 30px;
+    left: 0;
+    width: 150px;
+    z-index: 10;
+}
+
+.filter-nav-dropdown div {
+    padding: 8px;
+}
+
+.filter-nav-dropdown div:hover {
+    background-color: rgb(200, 100, 200);
+}
+
+#add-movie-form {
+    display: none;
+    width: 50%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.movie-form {
+    background-color: rgb(40, 40, 40);
+    color: whitesmoke;
+    border: solid 2px rgb(130, 50, 130);
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 20px;
+    height: 20px;
+    resize: none;
+}
+
+.movie-form-plot {
+    height: 100px;
+}
+
+.movie-form:focus {
+    outline: none;
+    border: solid 2px rgb(200, 100, 200);
+}
+
+#edit-movie-form {
+    display: none;
+    width: 50%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.arrow-down {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    border: solid white;
+    border-width: 0px 3px 3px 0px;
+    display: inline-block;
+    padding: 3px;
+    rotate: 45deg;
+}
+
+.filter-page-search {
+    background-color: rgb(40, 40, 40);
+    color: whitesmoke;
+    width: 60%;
+    height: 30px;
+    padding-left: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border: solid 2px rgb(130, 50, 130);
+    font-family: monospace;
+}
+
+.filter-page-search:focus {
+    outline: none;
+    border: solid 2px rgb(200, 100, 200);
+}
+
+#movies-container {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie-card {
+    background-color: rgb(130, 50, 130);
+    position: relative;
+    border-radius: 5px;
+    border: solid 1px rgb(200, 100, 200);
+    margin: 9px;
+    width: 250px;
+    height: 350px;
+    text-align: center;
+}
+
+.movie-card:hover {
+    background-color: rgb(200, 100, 200);
+    cursor: pointer;
+}
+
+.movie-card img {
+    background-color: rgb(200, 100, 200);
+    width: 250px;
+    height: 280px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.movie-card a {
+    line-height: 16px;
+}
+
+.movie-card h2 {
+    line-height: 20px;
+}
+
+.movie-card:hover .movie-information {
+    display: grid;
+    grid-template-rows: 50px 150px auto auto auto auto;
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+}
+
+.movie-information {
+    background-color: rgb(50, 50, 50);
+    display: grid;
+    grid-template-rows: 50px 150px auto auto auto auto;
+    position: absolute;
+    top: 30px;
+    left: 250px;
+    width: 300px;
+    height: 400px;
+    border-radius: 5px;
+    border: solid 1px rgb(200, 100, 200);
+    text-align: left;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.movie-information:hover {
+    cursor: auto;
+}
+
+.movie-information h2 {
+    padding: 10px;
+}
+
+.movie-information a {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+footer {
+    background-color: rgb(50, 50, 50);
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    height: 100px;
+    margin-bottom: 30px;
+    text-align: center;
+    z-index: 1;
+}
+
+footer div {
+    padding: 40px;
+}

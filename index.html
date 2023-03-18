@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="css/styles.css">
+<title>Movie data</title>
+</head>
+<body>
+    <header>
+        <h1>Movie data</h1>
+    </header>
+    <div class="main-content">
+        <div class="page-title">
+            <h2>Filter</h2>
+        </div>
+        <div class="filters">
+            <div class="filters-nav">
+                <button class="filter-nav-btn" onclick="Toggle_form('year-dropdown-menu')"><a>Year</a>
+                    <div class="arrow-down"></div>
+                    <div class="filter-nav-dropdown" id="year-dropdown-menu">
+                        <div id="movies-year-ascending" onclick="Sort_By_Year_Up()">Ascending</div>
+                        <div id="movies-year-descending" onclick="Sort_By_Year_Down()">Descending</div>
+                    </div>
+                </button>
+                <button class="filter-nav-btn" onclick="Clear_Add_Movie_Fields(), Toggle_form('add-movie-form')"><a>Add movie</a>
+                    <div class="arrow-down"></div>
+                </button>
+                <button class="filter-nav-btn" onclick="Input_Movies(), Toggle_form('edit-movie-form')"><a>Edit movie</a>
+                    <div class="arrow-down"></div>
+                </button>
+            </div>
+        </div>
+        <!--Add movie form-->
+        <div id="add-movie-form">
+            <a>Movie name </a>
+            <textarea class="movie-form" id="movie-name" type="text" maxlength="50"></textarea><br>
+            <a>Cast </a>
+            <textarea class="movie-form" id="cast" type="text" maxlength="150"></textarea><br>
+            <a>Runtime </a>
+            <input class="movie-form" id="runtime" type="number" placeholder="123"><br>
+            <a>Rating </a>
+            <input class="movie-form" id="rating" type="number" placeholder="0.0"><br>
+            <a>Year </a>
+            <input class="movie-form" id="year" type="number" placeholder="2000"><br>
+            <a>Plot </a>
+            <textarea class="movie-form movie-form-plot" id="plot" type="text" maxlength="260"></textarea><br>
+            <button class="filter-nav-btn" onclick="Add_Movie()"><a>Submit</a></button>
+        </div>
+        <!--Edit movie form-->
+        <div id="edit-movie-form">
+            <a>Select movie</a>
+            <select class="movie-form" onchange="Input_Movie_Info(this.value)" id="movies">
+                <option>--Select a movie--</option>
+            </select><br>
+            <a>Movie name</a>
+            <textarea class="movie-form" name="test" id="edit-movie-name" type="text" maxlength="50"></textarea><br>
+            <a>Cast </a>
+            <textarea class="movie-form" id="edit-cast" type="text" maxlength="150"></textarea><br>
+            <a>Runtime</a>
+            <input class="movie-form" id="edit-runtime" type="number" placeholder="123"><br>
+            <a>Rating</a>
+            <input class="movie-form" id="edit-rating" type="number" placeholder="0.0"><br>
+            <a>Year</a>
+            <input class="movie-form" id="edit-year" type="number" placeholder="2000"><br>
+            <a>Plot</a>
+            <textarea class="movie-form movie-form-plot" id="edit-plot" type="text" maxlength="260"></textarea><br>
+            <button class="filter-nav-btn" onclick="Edit_Movie()"><a>Submit</a></button>
+        </div>
+        <!--<input type="text" class="filter-page-search" value="" placeholder="Search...">-->
+        <div id="movies-container">
+        </div>
+        <footer>
+            <div><a>Movie data <script>document.write(new Date().getFullYear())</script></a></div>
+        </footer>
+    </div>
+</body>
+    <script src="javascript/javascript.js"></script>
+</html>
